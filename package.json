@@ -38,7 +38,11 @@
     "grunt-bower-task": "*",
     "grunt-karma": "latest",
     "grunt-conventional-changelog": "0.0.12",
-    "grunt-zip": "*"
+    "grunt-zip": "*",
+    "karma-jasmine": "*",
+    "karma-chrome-launcher": "*",
+    "karma-firefox-launcher": "*",
+    "karma-phantomjs-launcher": "*"
   },
   "scripts": {
     "test": "grunt travis --verbose"
