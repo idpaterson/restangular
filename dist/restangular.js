@@ -1,6 +1,6 @@
 /**
  * Restful Resources service for AngularJS apps
- * @version v1.4.0 - 2015-04-03 * @link https://github.com/mgonto/restangular
+ * @version v1.5.1 - 2015-06-15 * @link https://github.com/mgonto/restangular
  * @author Martin Gontovnikas <martin@gon.to>
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */(function() {
@@ -1006,7 +1006,9 @@ restangular.provider('Restangular', function() {
       function restangularizeCollectionAndElements(parent, element, route) {
         var collection = restangularizeCollection(parent, element, route, false);
         _.each(collection, function(elem) {
-          restangularizeElem(parent, elem, route, false);
+          if (elem) {
+            restangularizeElem(parent, elem, route, false);
+          }
         });
         return collection;
       }
